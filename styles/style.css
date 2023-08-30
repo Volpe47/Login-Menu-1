@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/*Colors*/
+:root {
+    --delft-blue: #3A445D;
+    --delft-blue-alpha: #3a445d80;
+    --orange: #FAA613;
+    --nyanza: #D0E3CC;
+    --dark-nyanza: #aab9a7;
+}
+
+/*Global Configurations*/
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0em;
+    margin: 0em;
+    box-sizing: border-box;
+}
+
+/*Body Settings*/
+body {
+    background-color: var(--orange);
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    background-color: var(--delft-blue);
+    color: var(--nyanza);
+    width: 300px;
+    height: 615px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px var(--delft-blue-alpha);
+
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
+}
+
+.images {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+}
+
+.forms {
+    display: block;
+    padding: 10px;
+}
+
+.forms > h1,p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.forms > p {
+    font-size: 0.8em;
+}
+
+/*Forms*/
+.field {
+    background-color: var(--orange);
+    color: var(--delft-blue);
+    border: 2px solid var(--orange);
+    height: 3em;
+    border-radius: 15px;
+    margin: 5px 0px;
+}
+
+.field > label {
+    display: none;
+}
+
+.field > span {
+    font-size: 2em;
+    width: 40px;
+    padding: 7px;
+}
+
+.field > input {
+    background-color: var(--nyanza);
+    font-size: 1em;
+    height: 100%;
+    width: calc(100% - 44.5px);    
+    border-radius: 15px;
+    padding: 4px;
+    
+    transform: translateY(-10px);
+}
+.field > input:focus-within {
+    background-color: white;
+}
+
+form > input[type=submit] {
+    background-color: var(--nyanza);
+    color: var(--delft-blue);
+
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 3em;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: var(--dark-nyanza);
+}
+
+form > a.a-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1em;
+    width: 100%;
+    height: 3em;    
+    margin-top: 5px;
+
+    background-color: var(--delft-blue);
+    color: var(--nyanza);
+    border: 1px solid var(--nyanza);
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+form > a.a-button:hover {    
+    background-color: var(--dark-nyanza);
+    border: 1px solid var(--dark-nyanza);
+    color: var(--delft-blue);
+}
+
+form > a.a-button > i {
+    font-size: 1em;
+}
